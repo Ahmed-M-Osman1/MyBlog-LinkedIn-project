@@ -16,7 +16,7 @@ function App() {
       <Route exact path="/" component={HomePage}/>
       <Route path="/about" component={AboutPage}/>
       <Route path="/articles-list" component={ArticleListPage}/>
-      {/* <Route path="/article/:name" component={ArticalPage}/> */}
+      <Route path="/article/:name" component={ArticalPage}/>
       <Route component={NotFoundPage}/>
       </Switch>
     </div>
