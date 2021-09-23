@@ -4,16 +4,19 @@ import AboutPage from './pages/AboutPage';
 import ArticalList from './pages/ArticalList';
 import ArticalPage from './pages/ArticalPage'
 import HomePage from './pages/HomePage';
+import Navbar from './Navbar';
+
 function App() {
   return (
-    <Route>
+    <Router>
     <div className="App">
+      <Navbar/>
       <Route exact path="/" component={HomePage}/>
       <Route path="/about" component={AboutPage}/>
       <Route path="/articles-list" component={ArticalList}/>
-      <Route path="/article" component={ArticalPage}/>
+      <Route path="/article/:name" component={ArticalPage}/>
     </div>
-    </Route>
+    </Router>
   );
 }
 
