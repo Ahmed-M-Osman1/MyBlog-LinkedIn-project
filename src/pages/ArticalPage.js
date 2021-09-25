@@ -1,8 +1,9 @@
-import React, { setState,useEffect } from 'react'
+import React, { useState,useEffect } from 'react'
 import articlesContent from './Artical-content';
 import NotFoundPage from './NotFoundPage';
 import CommentList from '../components/commentList';
-
+import UpvoteSection from '../components/UpvoteSection';
+import AddCommentForm from '../components/AddCommentForm';
 const ArticalPage =({match})=>{ 
     const name = match.params.name;
     const article = articlesContent.find(article => article.name === name)
@@ -24,11 +25,12 @@ const ArticalPage =({match})=>{
     return (
       <>
         <h1>{article.title}</h1>
-        <p>This post has been upvoted {articleInfo,upvote} time</p>
+          <UpvoteSection articlesName={name} upvote={articleInfo.upvote} setArticleInfo={setArticleInfo}/>
         {article.content.map((para,key)=>(
             <p key={key}>{para}</p>
             ))}
             <CommentList comments={articleInfo.comment}/>
+            <AddCommentForm articleName={name} setArticleInfo={setArticleInfo}/>
       </>
     )
     };

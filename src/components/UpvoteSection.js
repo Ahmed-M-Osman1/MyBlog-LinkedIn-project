@@ -1,7 +1,7 @@
 import React from 'react'
 import articles from '../pages/Artical-content';
 
-const UpvoteSection =()=> {
+const UpvoteSection =({ articlesName, upvote, setArticleInfo})=> {
     const upvoteArticle = async () => {
         const result = await fetch(`/api/articles/${articlesName}/upvote`, {
             method: 'POST',
@@ -11,8 +11,8 @@ const UpvoteSection =()=> {
     }
     return (
     <div id="upvotes-section">
-        <button onClick>Add upvote</button>
-        <p>This post has been upvoted {articleInfo,upvote} time</p>
+        <button onClick={()=> upvoteArticle()}>Add upvote</button>
+        <p>This post has been upvoted {upvote} time</p>
     </div>
     );
 };
