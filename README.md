@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with My Blog react linkedin project app:
 
 This project is a part of become react-programmer path at linkedin:
 https://www.linkedin.com/learning/react-creating-and-hosting-a-full-stack-site/react-for-full-stack-solutions
